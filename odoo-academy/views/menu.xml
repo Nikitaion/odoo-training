@@ -15,7 +15,7 @@
             <field name="name">open.academy.form.view</field>
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
-                <form string="Students">
+                <form string="Courses">
                     <sheet>
                         <div class="oe_title">
                             <label for="name" class="oe_edit_only" string="Student Name"/>
@@ -27,6 +27,7 @@
                         <group colspan="2" col="2">
                             <field name="description"/>
                             <field name="level"/>
+                            <field name="active"/>
                         </group>
                     </sheet>
                 </form>
@@ -38,10 +39,11 @@
             <field name="name">open.academy.tree.view</field>
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
-                <tree string="student list">
+                <tree string="courses list">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="level"/>
+                    <field name="active"/>
                 </tree>
             </field>
         </record>

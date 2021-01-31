@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"my_unique_id","my_unique_name","model_academy_course",,1,1,1,1
+
+Нужно создать тут группу
