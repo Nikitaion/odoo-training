@@ -13,7 +13,7 @@
 
         <record id="open_academy_form" model="ir.ui.view">
             <field name="name">open.academy.form.view</field>
-            <field name="res_model">academy.course</field>
+            <field name="model">academy.course</field>
             <field name="arch" type="xml">
                 <form string="Students">
                     <header>
@@ -39,7 +39,7 @@
 
         <record id="open_academy_tree" model="ir.ui.view">
             <field name="name">open.academy.tree.view</field>
-            <field name="res_model">academy.course</field>
+            <field name="model">academy.course</field>
             <field name="arch" type="xml">
                 <tree string="student list">
                     <field name="name"/>
