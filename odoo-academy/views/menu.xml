@@ -40,10 +40,10 @@
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
                 <tree string="courses list">
-                    <field name="name"/>
-                    <field name="description"/>
-                    <field name="level"/>
-                    <field name="active"/>
+                    <field name="name" attrs="{'invisible':[('level', '==', False)]"/>
+                    <field name="description" attrs="{'invisible':[('level', '==', False)]"/>
+                    <field name="level" attrs="{'invisible':[('level', '==', False)]"/>
+                    <field name="active" attrs="{'invisible':[('level', '==', False)]"/>
                 </tree>
             </field>
         </record>
