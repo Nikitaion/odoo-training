@@ -9,9 +9,10 @@
     'depends': ['base'],
     'data': [
         #data
-        'views/menu.xml'
+        'security/security.xml',
+        'security/ir.model.access.csv'
 
-        #'security/ir.model.access.csv'
+        'views/menu.xml'
         #views
     ],
     'demo': [],

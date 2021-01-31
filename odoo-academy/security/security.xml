@@ -1,4 +1,5 @@
 <data noupdate="1">
-
-
+    <record id="academy_manager" model="res.groups">
+        <field name="name">Odoo Manager</field>
+    </record>
 </data>
