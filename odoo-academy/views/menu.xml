@@ -22,9 +22,9 @@
                     </header>
                     <sheet>
                         <div class="oe_title">
-                            <label for="nameOfStudent" class="oe_edit_only" string="Student Name"/>
+                            <label for="name" class="oe_edit_only" string="Student Name"/>
                             <h1>
-                                <field name="nameOfStudent"/>
+                                <field name="name"/>
                             </h1>
                         </div>
                         <separator string="General" colspan="2"/>
@@ -42,8 +42,8 @@
             <field name="res_model">academy.course</field>
             <field name="arch" type="xml">
                 <tree string="student list">
-                    <field name="nameOfStudent"/>
-                    <field name="student_id"/>
+                    <field name="name"/>
+                    <field name="level"/>
                 </tree>
             </field>
         </record>
