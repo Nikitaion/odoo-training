@@ -9,6 +9,7 @@
     'depends': ['base'],
     'data': [
         #data
+        'views/menu.xml'
 
 
         #views

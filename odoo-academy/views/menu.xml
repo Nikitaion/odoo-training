@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_open_academy" name="OpenAcademy" sequence="25"/>
+
+        <record id="open_academy_config_action" model="ir.actions.act_window">
+            <field name="name">Open Academy</field>
+            <field name="res_model">academy.course</field>
+            <field name="view_model">tree,form</field>
+        </record>
+
+        <menuitem id="menu_open_academy_home" name="Dashboard" parent="menu_open_academy" sequence="2" action="open_academy_config_action"/>
+        
+    </data>
+</odoo>
