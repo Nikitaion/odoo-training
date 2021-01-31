@@ -25,7 +25,8 @@
                         </div>
                         <separator string="General" colspan="2"/>
                         <group colspan="2" col="2">
-                            <field name="description" plaseholder="student description"/>
+                            <field name="description"/>
+                            <field name="level"/>
                         </group>
                     </sheet>
                 </form>
@@ -39,6 +40,7 @@
             <field name="arch" type="xml">
                 <tree string="student list">
                     <field name="name"/>
+                    <field name="description"/>
                     <field name="level"/>
                 </tree>
             </field>
