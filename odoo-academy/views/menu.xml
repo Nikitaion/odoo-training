@@ -11,5 +11,25 @@
 
         <menuitem id="menu_open_academy_home" name="Dashboard" parent="menu_open_academy" sequence="2" action="open_academy_config_action"/>
 
+        <form string="Students">
+            <header>
+                <button string="Confirm" type="object" name="action_confirm" states="draft" class="oe_highlight"/>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <label for="nameOfStudent" class="oe_edit_only" string="Student Name"/>
+                    <h1><field name="nameOfStudent"/></h1>
+                </div>
+                <separator string="General" colspan="2"/>
+                <group colspan="2" col="2">
+                    <field name="description" plaseholder="student description"/>
+                </group>
+            </sheet>
+        </form>
+        
+        <tree string="student list">
+            <field name="nameOfStudent"/>
+            <field name="student_id"/>
+        </tree>
     </data>
 </odoo>
