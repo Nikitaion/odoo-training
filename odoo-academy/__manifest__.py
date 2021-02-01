@@ -12,7 +12,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
 
-        'views/menu.xml'
+        'views/menu.xml',
         'views/attendee_view.xml'
 
         #views
