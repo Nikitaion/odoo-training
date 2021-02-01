@@ -2,3 +2,4 @@
 "my_unique_id","my unique name","model_academy_course","academy_manager",1,1,1,1
 "course_manager","course manager","model_academy_course","academy_manager",1,1,1,1
 "student","student","model_academy_attendee",,1,1,1,1
+"teacher","teacher","model_academy_teacher",,1,1,1,1
