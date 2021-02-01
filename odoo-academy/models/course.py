@@ -11,6 +11,8 @@ class Course(models.Model):
 
     teacher_id = fields.Many2one(comodel_name='academy.teacher', string='Course teacher')
     attendee_id = fields.Many2many(comodel_name='academy.attendee', string='Course attendee')
+    teacher_name = fields.Char(related='teacher_id.name')
+
 
     name = fields.Char(string='Title', required=True)
     description = fields.Text(string='Description')
@@ -125,3 +127,5 @@ class Attendee(models.Model):
     @api.depends('course_id')
     def computeNumberOfCourses(self):
         self.number_of_courses = len(self.course_id)
+
+

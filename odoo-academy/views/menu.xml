@@ -35,6 +35,8 @@
                         <group colspan="2" col="2">
                             <field name="description"/>
                             <field name="attendee_id"/>
+                            <field name="teacher_id"/>
+                            <field name="teacher_name"/>
                             <field name="level"/>
                             <field name="active"/>
                             <field name="start_date"/>
