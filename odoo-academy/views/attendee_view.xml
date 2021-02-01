@@ -33,6 +33,7 @@
                         <group colspan="2" col="2">
                             <field name="name"/>
                             <field name="course_id"/>
+                            <field name="number_of_courses"/>
                         </group>
                     </sheet>
                 </form>

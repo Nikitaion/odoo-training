@@ -114,13 +114,14 @@ class Attendee(models.Model):
 
     course_id = fields.Many2many(comodel_name='academy.course', string='Attendee courses')
 
-    def confirm(self):
+    number_of_courses = fields.Integer(compute = 'computeNumberOfCourses')
+
+    def confirm(self): #Create new course
         self.course_id = [(0, 0, {'name': self.name + ' course'})]  # (0, 0, values) - add a newly created record
 
     def cancel(self):
         pass
 
-    def createNewCourse(self):
-        self.course_id = [(0, 0, {'name': 'aaa', 'student_id': self.id})]  # (0, 0, values) - add a newly created record
-
-    #when we call function - we dublicate course with new name and same attendees
+    @api.depends('course_id')
+    def computeNumberOfCourses(self):
+        self.number_of_courses = len(self.course_id)
