@@ -10,3 +10,12 @@ class Course(models.Model):
     description = fields.Text(string='Description')
     level = fields.Selection([('beginner', 'Beginner'),('intermediate', 'Intermediate'),('professional', 'Professional')])
     active = fields.Boolean(string='Is active', default=True)
+
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('confirmed', 'Confirmed'),
+        ('canceled', 'Canceled'),
+    ], default='draft')
+
+    def confirm(self):
+        self.write({'state':'state_name'})

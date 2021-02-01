@@ -17,8 +17,9 @@
             <field name="arch" type="xml">
                 <form string="Courses">
                     <header>
-                    <button name="confirm" string="confirm" id="confirm_button"
-                            class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>
+                        <button name="confirm" string="confirm" id="confirm_button"
+                                class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>
+                        <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
                         <div class="oe_title">
@@ -51,6 +52,6 @@
                 </tree>
             </field>
         </record>
-        
+
     </data>
 </odoo>
