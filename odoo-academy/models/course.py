@@ -31,3 +31,9 @@ class Course(models.Model):
     def changeDate(self):
         if self.start_date:
             self.end_date = self.start_date + relativedelta(months=1)
+
+    @api.constrains('fieldName')
+    def errorIfConstrains(self):
+        for existingName in self.name:
+            if self.name == existingName.name:
+                raise ValidationError("You already have course with same name!")
