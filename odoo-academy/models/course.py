@@ -107,6 +107,7 @@ class Course(models.Model):
 class Teacher(models.Model):
     _name = 'academy.teacher'
 
+    name = fields.Char()
     student_id = fields.Many2one(comodel_name='academy.student')
 
 class Attendee(models.Model):
