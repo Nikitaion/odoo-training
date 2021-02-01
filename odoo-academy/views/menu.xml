@@ -36,6 +36,8 @@
                             <field name="description"/>
                             <field name="level"/>
                             <field name="active"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
                         </group>
                     </sheet>
                 </form>

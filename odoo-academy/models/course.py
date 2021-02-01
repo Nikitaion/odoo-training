@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields
+from datetime import datetime
 
 class Course(models.Model):
     _name = 'academy.course'
@@ -10,6 +11,9 @@ class Course(models.Model):
     description = fields.Text(string='Description')
     level = fields.Selection([('beginner', 'Beginner'),('intermediate', 'Intermediate'),('professional', 'Professional')])
     active = fields.Boolean(string='Is active', default=True)
+
+    start_date = fields.date(string='Start date', default=fields.Date.context_today)
+    end_date = fields.date(string='End date')
 
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -22,3 +26,7 @@ class Course(models.Model):
 
     def cancel(self):
         self.write({'state':'canceled'})
+
+    # @api.onchange()
+    # def changeDate(self):
+    #     func
