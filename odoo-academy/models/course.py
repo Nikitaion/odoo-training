@@ -12,8 +12,8 @@ class Course(models.Model):
     level = fields.Selection([('beginner', 'Beginner'),('intermediate', 'Intermediate'),('professional', 'Professional')])
     active = fields.Boolean(string='Is active', default=True)
 
-    start_date = fields.date(string='Start date')
-    end_date = fields.date(string='End date')
+    start_date = fields.Date(string='Start date')
+    end_date = fields.Date(string='End date')
 
     state = fields.Selection([
         ('draft', 'Draft'),
