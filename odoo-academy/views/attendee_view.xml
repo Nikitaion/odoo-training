@@ -9,7 +9,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 <!-- ??? -->
-        <menuitem id="menu_attendees" name="Attendees" parent="menu_attendees" sequence="2" action="attendees_config_action"/>
+        <menuitem id="submenu_attendees" name="Attendees" parent="menu_attendees" sequence="2" action="attendees_config_action"/>
 
         <record id="attendees_form" model="ir.ui.view">
             <field name="name">attendees.form.view</field>
