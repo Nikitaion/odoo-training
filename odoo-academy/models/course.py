@@ -18,4 +18,7 @@ class Course(models.Model):
     ], default='draft')
 
     def confirm(self):
-        self.write({'state':'state_name'})
+        self.write({'state':'confirmed'})
+
+    def cancel(self):
+        self.write({'state':'canceled'})
