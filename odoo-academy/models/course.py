@@ -58,7 +58,7 @@ class Course(models.Model):
 
         playground_reference = fields.Reference(comodel_name='academy.playground')
 
-        gate_many2onereference = fields.Many2onereference(comodel_name='academy.gate')
+        #gate_many2onereference = fields.Many2onereference(comodel_name='academy.gate')
 
         birth_date = fields.Datetime()
 
