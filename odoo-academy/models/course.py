@@ -114,6 +114,12 @@ class Attendee(models.Model):
 
     course_id = fields.Many2many(comodel_name='academy.course', string='Attendee courses')
 
+    def confirm(self):
+        self.course_id = [(0, 0, {'name': 'aaa', 'student_id': self.id})]  # (0, 0, values) - add a newly created record
+
+    def cancel(self):
+        self.write({'state':'canceled'})
+
     def createNewCourse(self):
         self.course_id = [(0, 0, {'name': 'aaa', 'student_id': self.id})]  # (0, 0, values) - add a newly created record
 
