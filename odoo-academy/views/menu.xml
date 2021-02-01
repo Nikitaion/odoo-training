@@ -18,7 +18,7 @@
                 <form string="Courses">
                     <sheet>
                         <div class="oe_title">
-                            <label for="name" class="oe_edit_only" string="Student Name"/>
+                            <label for="name" class="oe_edit_only" string="Course Name"/>
                             <h1>
                                 <field name="name"/>
                             </h1>
