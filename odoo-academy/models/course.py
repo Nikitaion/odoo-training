@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 from dateutil.relativedelta import relativedelta
+from odoo.exceptions import ValidationError
 
 class Course(models.Model):
     _name = 'academy.course'
@@ -32,11 +33,11 @@ class Course(models.Model):
         if self.start_date:
             self.end_date = self.start_date + relativedelta(months=1)
 
-    @api.constrains('fieldName')
+    @api.constrains('name')
     def errorIfConstrains(self):
-        if self.search([('name', '=', self.name) & ('rec.id', '!=', self.id)]):
+        if self.search(['&', ('name', '=', self.name), ('id', '!=', self.id)]):
             raise ValidationError("You already have course with same name!")
 
         # for existingName in self.name:
-        #     if self.name == existingName.name:
+        #     if (self.name == existingName.name) and (rec.name != self.name):
         #         raise ValidationError("You already have course with same name!")
