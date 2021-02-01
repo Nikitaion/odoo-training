@@ -49,5 +49,17 @@
         </record>
 
 
+        <record id="academy_button_confirm" model="ir.ui.view">
+            <field name="name">academy.button.confirm</field>
+            <field name="model">academy.course</field>
+            <field name="inherit_id" ref="open_academy_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="confirm" string="confirm" id="confirm_button"
+                            class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>
+                </header>
+            </field>
+        </record>
+
     </data>
 </odoo>
