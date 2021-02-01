@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
-from datetime import datetime
+from odoo import models, fields, api
+from dateutil.relativeDelta import relativeDelta
 
 class Course(models.Model):
     _name = 'academy.course'
@@ -27,6 +27,6 @@ class Course(models.Model):
     def cancel(self):
         self.write({'state':'canceled'})
 
-    # @api.onchange()
-    # def changeDate(self):
-    #     func
+    @api.onchange('start_date')
+    def changeDate(self):
+        self.end_date = self.start_date + relativeDelta(mounth=1)
