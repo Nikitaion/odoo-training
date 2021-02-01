@@ -34,6 +34,7 @@
                         <separator string="General" colspan="2"/>
                         <group colspan="2" col="2">
                             <field name="description"/>
+                            <field name="attendee_id"/>
                             <field name="level"/>
                             <field name="active"/>
                             <field name="start_date"/>
