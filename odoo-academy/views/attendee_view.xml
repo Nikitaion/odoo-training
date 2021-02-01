@@ -18,9 +18,9 @@
                 <form string="Attendees">
                     <header>
                         <button name="confirm" string="confirm" id="confirm_button"
-                                class="btn-primary" type="object" groups="odoo-academy.academy_manager" attrs="{'invisible': [('state','=', 'confirmed')]}"/>
+                                class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>
                         <button name="cancel" string="cancel" id="cancel_button"
-                                class="btn-primary" type="object" groups="odoo-academy.academy_manager" attrs="{'invisible': [('state','=', 'canceled')]}"/>
+                                class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>
                     </header>
                     <sheet>
                         <div class="oe_title">
