@@ -34,7 +34,7 @@ class Course(models.Model):
 
     @api.constrains('fieldName')
     def errorIfConstrains(self):
-        if self.search(self.name):
+        if self.search([('name', '=', self.name)]):
             raise ValidationError("You already have course with same name!")
 
         # for existingName in self.name:
