@@ -29,4 +29,4 @@ class Course(models.Model):
 
     @api.onchange('start_date')
     def changeDate(self):
-        self.end_date = self.start_date + relativedelta(mounth=1)
+        self.end_date = self.start_date + relativedelta(months=1)
