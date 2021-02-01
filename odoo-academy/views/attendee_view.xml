@@ -21,8 +21,6 @@
                                 class="btn-primary" type="object" groups="odoo-academy.academy_manager" attrs="{'invisible': [('state','=', 'confirmed')]}"/>
                         <button name="cancel" string="cancel" id="cancel_button"
                                 class="btn-primary" type="object" groups="odoo-academy.academy_manager" attrs="{'invisible': [('state','=', 'canceled')]}"/>
-
-                        <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
                         <div class="oe_title">
