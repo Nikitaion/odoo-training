@@ -20,4 +20,13 @@
             <field name="perm_read" eval="1"/>
     </record>
 
+    <record id="rule" model="ir.rule">
+            <field name="name">rule</field>
+            <field name="model_id" ref="model_academy_course"/>
+            <field name="domain_force">[('active', '=', True)] if.user.has_group('academy_manager') else [(1, '=', 1)]</field>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="perm_read" eval="1"/>
+    </record>
 </data>
