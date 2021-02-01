@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from dateutil.relativeDelta import relativeDelta
+from dateutil.relativedelta import relativedelta
 
 class Course(models.Model):
     _name = 'academy.course'
@@ -29,4 +29,4 @@ class Course(models.Model):
 
     @api.onchange('start_date')
     def changeDate(self):
-        self.end_date = self.start_date + relativeDelta(mounth=1)
+        self.end_date = self.start_date + relativedelta(mounth=1)
