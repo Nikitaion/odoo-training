@@ -14,7 +14,7 @@
 
         'views/menu.xml',
         'views/attendee_view.xml',
-        'views/inherit_test'
+        'views/inherit_test.xml'
 
         #views
     ],
