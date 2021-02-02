@@ -1,5 +1,5 @@
 <odoo>
-    <record id="wizard_action" model="ir.actions.act.window">
+    <record id="wizard_action" model="ir.actions.act_window">
         <field name="name">Wizard</field>
         <field name="res_model">academy.wizard</field>
         <field name="view_type">form</field>
