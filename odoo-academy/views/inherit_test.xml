@@ -16,3 +16,16 @@
         </record>
     </data>
 </odoo>
+
+
+<!--<odoo>-->
+<!--    <record id="wizard_action" model="ir.actions.act.window">-->
+<!--        <field name="name">Wizard</field>-->
+<!--        <field name="res_model">academy.wizard</field>-->
+<!--        <field name="view_type">form</field>-->
+<!--        <field name="binding_model_id" ref="model_academy_student"/>-->
+<!--        <field name="target">new</field>-->
+<!--    </record>-->
+
+<!--    <record id="wizard_form_view" model=""-->
+<!--</odoo>-->

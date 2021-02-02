@@ -115,6 +115,8 @@ class Attendee(models.Model):
 
     name = fields.Char()
 
+    mobile = fields.char()
+
     course_id = fields.Many2many(comodel_name='academy.course', string='Attendee courses')
 
     number_of_courses = fields.Integer(compute = 'computeNumberOfCourses', store=True)
