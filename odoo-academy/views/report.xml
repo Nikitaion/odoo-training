@@ -10,7 +10,7 @@
     <template id="academy_report">
         <t t-call="web.basic_layout"> <!-- layout need if we want print report -->
             <h1 class="text-center">
-                <t t-esc="docks[0].name"/>
+                <t t-esc="docs[0].name"/>
             </h1>
         </t>
 <!--        <t t-call="web.external_layout">-->
