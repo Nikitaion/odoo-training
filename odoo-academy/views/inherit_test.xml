@@ -8,6 +8,10 @@
                 <xpath expr="//field[@name='category_id']" position="after">
                     <field name="test_field"/>
                 </xpath>
+
+                <xpath expr="//field[@name='category_id']" position="before">
+                    <field name="another_test_field"/>
+                </xpath>
             </field>
         </record>
     </data>
