@@ -1,6 +1,7 @@
 <odoo>
     <record id="academy_report" model="ir.actions.report">
         <field name="name">academy_report</field>
+        <field name="report_name">report</field>
         <field name="model">academy.course</field>
         <field name="report_type">qweb-html</field> <!-- qweb-html OR qweb-pdf -->
     </record>
