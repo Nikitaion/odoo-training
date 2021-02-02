@@ -45,7 +45,7 @@
             <field name="name">attendees.tree.view</field>
             <field name="model">academy.attendee</field>
             <field name="arch" type="xml">
-                <tree string="courses list">
+                <tree string="courses list" decoration-primary="course_id>1" editable="top">
                     <field name="name"/>
                     <field name="course_id"/>
                 </tree>
