@@ -6,7 +6,7 @@
         <record id="open_academy_config_action" model="ir.actions.act_window">
             <field name="name">Open Academy</field>
             <field name="res_model">academy.course</field>
-            <field name="view_mode">tree,form,pivot</field>
+            <field name="view_mode">tree,form,pivot,kanban</field>
         </record>
 
         <menuitem id="menu_open_academy_home" name="Dashboard" parent="menu_open_academy" sequence="2" action="open_academy_config_action"/>
@@ -52,7 +52,7 @@
             <field name="name">open.academy.tree.view</field>
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
-                <tree string="courses list" decoration-warning="active==True" editable="top">
+                <tree string="courses list" decoration-warning="active==True">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="level"/>
@@ -72,6 +72,26 @@
                     <field name="level"/>
                     <field name="active"/>
                 </pivot>
+            </field>
+        </record>
+
+        <record id="open_academy_kanban" model="ir.ui.view">
+            <field name="name">open.academy.kanban.view</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                        <templates>
+                            <t t-name="kanban-box">
+                                <div>
+                                    <strong><field name="name"/></strong>
+                                </div>
+                            </t>
+                        </templates>
+<!--                    <field name="description"/>-->
+<!--                    <field name="level"/>-->
+<!--                    <field name="active"/>-->
+                </kanban>
             </field>
         </record>
     </data>
