@@ -79,8 +79,10 @@
             <field name="name">open.academy.kanban.view</field>
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban> <!-- draggable="0"-->
                     <field name="name"/>
+                    <field name="description"/>
+
                         <templates>
                             <t t-name="kanban-box">
                                 <div>
