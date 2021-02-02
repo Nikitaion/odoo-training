@@ -79,16 +79,15 @@
             <field name="name">open.academy.kanban.view</field>
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
-                <kanban default_group_by="state"> <!-- draggable="0"-->
+                <kanban default_group_by="state" draggable="0"> <!-- draggable for block moving in kanban -->
                     <field name="name"/>
                     <field name="description"/>
-
                         <templates>
-                            <t t-name="kanban-box" t-attf-class="oe_kanban_global_click">
+                            <div t-name="kanban-box" t-attf-class="oe_kanban_global_click"> <!-- if we use <t> tag instead <div> - fields will be not clickable -->
                                 <div>
                                     <strong><field name="name"/></strong>
                                 </div>
-                            </t>
+                            </div>
                         </templates>
 <!--                    <field name="description"/>-->
 <!--                    <field name="level"/>-->
