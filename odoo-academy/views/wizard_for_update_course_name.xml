@@ -25,12 +25,10 @@
                     <button name="update_name" string="Update name" id="update_name"
                             class="btn-primary" type="object"/>
                     <button string="Cancel" special="cancel" class="btn-primary"/>
-
                 </footer>
             </form>
         </field>
     </record>
 
     <menuitem id="menu_wizard" name="Wizard" sequence="25" action="wizard_action"/>
-
 </odoo>
