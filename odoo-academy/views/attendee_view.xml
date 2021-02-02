@@ -6,7 +6,7 @@
         <record id="attendees_config_action" model="ir.actions.act_window">
             <field name="name">Attendees List</field>
             <field name="res_model">academy.attendee</field>
-            <field name="view_mode">tree,form,pivot</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
         </record>
 <!-- ??? -->
         <menuitem id="submenu_attendees" name="Attendees" parent="menu_attendees" sequence="2" action="attendees_config_action"/>
@@ -57,6 +57,18 @@
             <field name="model">academy.attendee</field>
             <field name="arch" type="xml">
                 <pivot string="Attendees pivot view">
+                    <field name="name"/>
+                    <field name="course_id"/>
+                    <field name="number_of_courses" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="attendees_graph" model="ir.ui.view">
+            <field name="name">attendees.graph.view</field>
+            <field name="model">academy.attendee</field>
+            <field name="arch" type="xml">
+                <pivot string="Attendees graph view">
                     <field name="name"/>
                     <field name="course_id"/>
                     <field name="number_of_courses" type="measure"/>
