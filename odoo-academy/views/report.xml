@@ -1,0 +1,11 @@
+<odoo>
+    <record id="academy_report" model="ir.actions.report">
+        <field name="name">academy_report</field>
+        <field name="model">academy.course</field>
+        <field name="report_type">qweb-html</field> <!-- qweb-html OR qweb-pdf -->
+    </record>
+
+    <template id="academy_report">
+        <h1>Test</h1>
+    </template>
+</odoo>
