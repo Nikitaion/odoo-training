@@ -12,6 +12,12 @@
             <h1 class="text-center">
                 <t t-esc="docs[0].name"/>
             </h1>
+            <table style="width:100%">
+                <tr>
+                    <span t-esc="doc['attendee.name']"/>
+                </tr>
+            </table>
+
         </t>
 <!--        <t t-call="web.external_layout">-->
 <!--            <h1>Test</h1>-->
