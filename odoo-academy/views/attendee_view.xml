@@ -51,5 +51,16 @@
                 </tree>
             </field>
         </record>
+
+        <record id="attendees_pivot" model="ir.ui.view">
+            <field name="name">attendees.pivot.view</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <pivot string="Attendees pivot view">
+                    <field name="name"/>
+                    <field name="course_id" type="measure"/>
+                </pivot>
+            </field>
+        </record>
     </data>
 </odoo>
