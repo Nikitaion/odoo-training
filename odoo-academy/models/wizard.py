@@ -5,10 +5,10 @@ class Wizard(models.TransientModel):
 
     name = fields.Char()
 
-    course_id = fields.Many2one('academy.course')
+    course_id = fields.Many2one('academy.course') #is assigned when calling the wizard (default_get is automatically called)
 
     @api.model
-    def default_get(self, fields):
+    def default_get(self, fields): #default_get - default function. It's need for wizard and execute when we call wizard(when we call update_name)
         record = super().default_get(fields)
         record['course_id'] = self._context.get('active_id')
         return record
