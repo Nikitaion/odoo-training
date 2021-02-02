@@ -10,7 +10,7 @@ class Wizard(models.TransientModel):
     @api.model
     def default_get(self, fields):
         record = super().default_get(fields)
-        record['course_id'] = self.context.get('active_id')
+        record['course_id'] = self._context.get('active_id')
         return record
 
     def update_name(self):
