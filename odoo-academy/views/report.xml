@@ -9,19 +9,23 @@
 
     <template id="academy_report">
         <t t-call="web.basic_layout"> <!-- layout need if we want print report -->
-            <h1 class="text-center">
-                <t t-esc="docs[0].name"/>
-            </h1>
-            <table style="width:100%">
-                <t t-foreach="docs[0].attendee_id" t-as="doc">
-                    <tr>
-                        <td>
-                            <span t-esc="doc.name"/>
-                        </td>
-                    </tr>
-                </t>
-            </table>
-
+            <t t-if="docs[0].attendee_id"> <!-- if no attendees -->
+                <h1 class="text-center">
+                    <t t-esc="docs[0].name"/>
+                </h1>
+                <table style="width:100%">
+                    <t t-foreach="docs[0].attendee_id" t-as="doc">
+                        <tr>
+                            <td>
+                                <span t-esc="doc.name"/>
+                            </td>
+                        </tr>
+                    </t>
+                </table>
+            </t>
+            <t t-else="">
+                no attendees :(
+            </t>
         </t>
         <!--        <t t-call="web.external_layout">-->
         <!--            <h1>Test</h1>-->
