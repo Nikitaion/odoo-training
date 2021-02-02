@@ -15,7 +15,8 @@
         'views/menu.xml',
         'views/attendee_view.xml',
         'views/inherit_test.xml',
-        'views/session_view.xml'
+        'views/session_view.xml',
+        'views/wizard_for_update_course_name.xml'
 
         #views
     ],
