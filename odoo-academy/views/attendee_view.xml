@@ -6,7 +6,7 @@
         <record id="attendees_config_action" model="ir.actions.act_window">
             <field name="name">Attendees List</field>
             <field name="res_model">academy.attendee</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,pivot</field>
         </record>
 <!-- ??? -->
         <menuitem id="submenu_attendees" name="Attendees" parent="menu_attendees" sequence="2" action="attendees_config_action"/>
