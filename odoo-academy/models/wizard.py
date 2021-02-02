@@ -7,6 +7,12 @@ class Wizard(models.TransientModel):
 
     course_id = fields.Many2one('academy.course')
 
+    @api.model
+    def default_get(self, fields):
+        record = super().default_get(fields)
+        record['course_id'] = self.context.get('active_id')
+        return record
+
     def update_name(self):
         self.course_id.name = self.name
 
