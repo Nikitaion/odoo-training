@@ -52,7 +52,7 @@
             <field name="name">open.academy.tree.view</field>
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
-                <tree string="courses list" decoration-warning="active==True">
+                <tree string="courses list" decoration-warning="active==True" editable="bottom">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="level"/>
