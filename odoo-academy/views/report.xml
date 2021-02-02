@@ -8,12 +8,14 @@
     </record>
 
     <template id="academy_report">
-<!--        <t t-call="web.basic_layout"> &lt;!&ndash; layout need if we want print report &ndash;&gt;-->
+        <t t-call="web.basic_layout"> <!-- layout need if we want print report -->
+            <h1 class="text-center">
+                <t t-esc="docks[0].name"/>
+            </h1>
+        </t>
+<!--        <t t-call="web.external_layout">-->
 <!--            <h1>Test</h1>-->
 <!--        </t>-->
-        <t t-call="web.external_layout">
-            <h1>Test</h1>
-        </t>
 
     </template>
 </odoo>
