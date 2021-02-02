@@ -1,13 +1,15 @@
 <odoo>
     <record id="academy_report" model="ir.actions.report">
         <field name="name">Academy Report</field>
-        <field name="report_name">odoo-academy.academy_report</field> <!-- report_name should be a template. modulename+templatename -->
+        <field name="report_name">odoo-academy.academy_report</field> <!-- report_name should be a template. name=modulename+templatename -->
         <field name="model">academy.course</field>
         <field name="report_type">qweb-html</field> <!-- qweb-html OR qweb-pdf -->
         <field name="binding_model_id" ref="model_academy_course"/>
     </record>
 
     <template id="academy_report">
-        <h1>Test</h1>
+        <t t-call="web.basic_layout"> <!--need if we want print report -->
+            <h1>Test</h1>
+        </t>
     </template>
 </odoo>
