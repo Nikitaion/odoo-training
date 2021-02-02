@@ -58,7 +58,8 @@
             <field name="arch" type="xml">
                 <pivot string="Attendees pivot view">
                     <field name="name"/>
-                    <field name="course_id" type="measure"/>
+                    <field name="course_id"/>
+                    <field name="number_of_courses" type="measure"/>
                 </pivot>
             </field>
         </record>
