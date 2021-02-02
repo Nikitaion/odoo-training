@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_session" name="SessionList" sequence="26"/>
+
+        <record id="session_123" model="ir.actions.act_window">
+            <field name="name">Session List</field>
+            <field name="res_model">academy.session</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- ??? -->
+        <menuitem id="submenu_session" name="Session" parent="menu_session" sequence="2" action="session_123"/>
+
+<!--        <record id="session_form" model="ir.ui.view">-->
+<!--            <field name="name">session.form.view</field>-->
+<!--            <field name="model">academy.session</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Sessions">-->
+<!--&lt;!&ndash;                    <header>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <button name="confirm" string="confirm" id="confirm_button"&ndash;&gt;-->
+<!--&lt;!&ndash;                                class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <button name="cancel" string="cancel" id="cancel_button"&ndash;&gt;-->
+<!--&lt;!&ndash;                                class="btn-primary" type="object" groups="odoo-academy.academy_manager"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </header>&ndash;&gt;-->
+<!--                    <sheet>-->
+<!--                        <div class="oe_title">-->
+<!--                            <label for="name" class="oe_edit_only" string="Session Name"/>-->
+<!--                            <h1>-->
+<!--                                <field name="name"/>-->
+<!--                            </h1>-->
+<!--                        </div>-->
+<!--                        <separator string="General" colspan="2"/>-->
+<!--                        <group colspan="2" col="2">-->
+<!--                            <field name="name"/>-->
+<!--                            <field name="course_id"/>-->
+<!--                            <field name="number_of_courses"/>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <record id="session_tree" model="ir.ui.view">
+            <field name="name">session.tree.view</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <tree string="sessions list">
+                    <field name="name_of_session"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
