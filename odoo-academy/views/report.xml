@@ -13,7 +13,7 @@
                 <t t-esc="docs[0].name"/>
             </h1>
             <table style="width:100%">
-                <t t-foreach="docs[0].attendee" t-as="doc">
+                <t t-foreach="docs[0].attendee_id" t-as="doc">
                     <tr>
                         <td>
                             <span t-esc="doc.name"/>
