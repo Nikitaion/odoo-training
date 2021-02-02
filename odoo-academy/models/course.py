@@ -26,9 +26,9 @@ class Course(models.Model):
         ('draft', 'Draft'),
         ('confirmed', 'Confirmed'),
         ('canceled', 'Canceled'),
-    ], default='draft')
+    ], default='draft') #creating selection inside Course model
 
-    def confirm(self):
+    def confirm(self): #function for button
         self.write({'state':'confirmed'})
 
     def cancel(self):
@@ -129,3 +129,28 @@ class Attendee(models.Model):
     def computeNumberOfCourses(self):
         for attendee in self:
             attendee.number_of_courses = len(attendee.course_id) #len - compute quantity of elements(student course id's)
+
+
+class ForInherit(models.Model):
+    _inherit = 'res.partner'
+
+    test_field = fields.Many2many(comodel_name='academy.course', string='Test field')
+
+
+
+# #Inheritance
+# class A():
+#     _name = "A"
+#     pass
+#
+# class B():
+#     _inherit = "A"
+#
+#     def foo(self):
+#         super().foo()
+#
+# class C():
+#     _inherit = "A"
+#
+#     def foo(self):
+#         super().foo()
