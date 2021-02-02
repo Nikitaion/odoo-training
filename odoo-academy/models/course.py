@@ -127,6 +127,5 @@ class Attendee(models.Model):
 
     @api.depends('course_id')
     def computeNumberOfCourses(self):
-        self.number_of_courses = len(self.course_id) #len - compute quantity of elements(student course id's)
-
-
+        for attendee in self:
+            attendee.number_of_courses = len(attendee.course_id) #len - compute quantity of elements(student course id's)
