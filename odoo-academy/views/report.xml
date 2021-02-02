@@ -8,8 +8,12 @@
     </record>
 
     <template id="academy_report">
-        <t t-call="web.basic_layout"> <!--need if we want print report -->
+<!--        <t t-call="web.basic_layout"> &lt;!&ndash; layout need if we want print report &ndash;&gt;-->
+<!--            <h1>Test</h1>-->
+<!--        </t>-->
+        <t t-call="web.external_layout">
             <h1>Test</h1>
         </t>
+
     </template>
 </odoo>
