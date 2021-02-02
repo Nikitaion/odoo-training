@@ -67,9 +67,9 @@
             <field name="model">academy.course</field>
             <field name="arch" type="xml">
                 <pivot string="Courses pivot view">
-                    <field name="name"/>
+                    <field name="name" type="measure"/>
                     <field name="description"/>
-                    <field name="level" type="measure"/>
+                    <field name="level"/>
                     <field name="active"/>
                 </pivot>
             </field>
