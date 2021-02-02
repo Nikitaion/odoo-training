@@ -117,7 +117,7 @@ class Attendee(models.Model):
 
     course_id = fields.Many2many(comodel_name='academy.course', string='Attendee courses')
 
-    number_of_courses = fields.Integer(compute = 'computeNumberOfCourses')
+    number_of_courses = fields.Integer(compute = 'computeNumberOfCourses', store=True)
 
     def confirm(self): #Create new course
         self.course_id = [(0, 0, {'name': self.name + ' course'})]  # (0, 0, values) - add a newly created record
