@@ -131,10 +131,6 @@ class Attendee(models.Model):
             attendee.number_of_courses = len(attendee.course_id) #len - compute quantity of elements(student course id's)
 
 
-class ForInherit(models.Model):
-    _inherit = 'res.partner'
-
-    test_field = fields.Many2many(comodel_name='academy.course', string='Test field')
 
 
 
