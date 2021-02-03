@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Odoo Academy',
-    'version': '1.3',
-    'description': """Academy module for manage Training: Courses, Sessions..""",
+    'version': '1.4',
+    'description': """Academy module for manage Training: Courses, Sessions...""",
     'category': 'Training',
     'author': 'NVP',
 
