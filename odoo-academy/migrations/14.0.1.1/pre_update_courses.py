@@ -8,4 +8,4 @@ def migrate(cr, version):
     x.name = y.name;
     """
 
-
+    cr.execute(query)

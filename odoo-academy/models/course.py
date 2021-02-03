@@ -28,6 +28,10 @@ class Course(models.Model):
         ('canceled', 'Canceled'),
     ], default='draft') #creating selection inside Course model
 
+    _sql_constrains = [
+        ('name_of_constrain_can_be_anything', 'unique(name)', 'A course with the same name already exists!') #name - field what we applied
+    ]
+
     def confirm(self): #function for button
         self.write({'state':'confirmed'})
 
