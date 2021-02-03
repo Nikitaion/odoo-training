@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="controller_template">
+            <t t-call="web.basic_layout">
+                <h1>Hello world!</h1>
+            </t>
+        </template>
+    </data>
+</odoo>
