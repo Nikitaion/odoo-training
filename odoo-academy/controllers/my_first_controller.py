@@ -5,4 +5,4 @@ class MyController(http.Controller):
     @http.route('/myurl', auth='public', website=True)
     def my_controller(self):
         my_scope = {'text':'hell to world!'}
-        return request.render('odoo-academy.controller_template', my_scope)
+        return request.render('odoo-academy.academy_report', my_scope)
