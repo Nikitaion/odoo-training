@@ -1,9 +1,8 @@
 from odoo import http
 from odoo.http import request
-import json
 
 class MyController(http.Controller):
-    @http.route('/myurl', auth='public', type='json')
+    @http.route('/myurl', auth='public', website=True)
     def my_controller(self):
-        my_json={'text':'Hello json!'}
-        return json.dumps(my_json)
+        my_scope = {'text':'hell to world!'}
+        return request.render('odoo-academy.controller_template', my_scope)
