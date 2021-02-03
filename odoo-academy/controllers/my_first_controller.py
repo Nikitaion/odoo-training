@@ -1,5 +1,6 @@
 from odoo import http
 from odoo.http import request
+import json
 
 class MyController(http.Controller):
     @http.route('/myurl', auth='public', type='json')
