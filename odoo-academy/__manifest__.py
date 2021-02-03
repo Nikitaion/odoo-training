@@ -6,7 +6,7 @@
     'category': 'Training',
     'author': 'NVP',
 
-    'depends': ['base'],
+    'depends': ['base', 'portal'],
     'data': [
         #data
         'security/security.xml',
