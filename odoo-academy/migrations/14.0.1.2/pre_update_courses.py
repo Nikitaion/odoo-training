@@ -1,11 +1,10 @@
 def migrate(cr, version):
     table_name, column_name = 'academy_course', 'name'
 
-    query = """" DELETE
-    FROM academy_course a
-    WHERE a.name <> (SELECT min(b.name)
+    query = """" DELETE FROM academy_course a
+    WHERE a.id <> (SELECT min(b.id)
     FROM academy_course b
-    WHERE a.key = b.key);
+    WHERE a.name = b.name);
     """
 
 
