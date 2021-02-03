@@ -6,4 +6,4 @@ class MyController(http.Controller):
     @http.route('/myurl', auth='public', type='json')
     def my_controller(self):
         my_json={'text':'Hello json!'}
-        return json.dump(my_json)
+        return json.dumps(my_json)
